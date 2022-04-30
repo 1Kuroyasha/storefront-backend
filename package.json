@@ -10,7 +10,8 @@
     "lint": "eslint --ext .js,.ts ./src --config .eslintrc.json --fix",
     "format": "prettier --config .prettierrc.json --write \"./**/*.ts\"",
     "migrate-up": "db-migrate up",
-    "migrate-down": "db-migrate reset"
+    "migrate-down": "db-migrate reset",
+    "test": "set NODE_ENV=TEST && db-migrate up --env test && tsc && jasmine --config=\"spec/support/jasmine.json\" && db-migrate reset && set NODE_ENV=DEVELOPMENT"
   },
   "repository": {
     "type": "git",

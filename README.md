@@ -2,8 +2,6 @@
 
 It is expected to run npm install first before executing any of the scripts below.
 
-
-
 ## Database Setup
 
 1. Create two databases (one for development the other for testing)
@@ -11,12 +9,10 @@ It is expected to run npm install first before executing any of the scripts belo
    ```
    -- development database
    CREATE DATABASE storefront_db;
-   
+
    -- test database
    CREATE DATABASE storefront_db_test;
    ```
-
-   
 
 2. Grant privileges
 
@@ -24,13 +20,11 @@ It is expected to run npm install first before executing any of the scripts belo
    -- connect to storefront and grant privileges to `default_user`
    \c storefront_db
    GRANT ALL PRIVILEGES ON DATABASE storefront TO postgres
-   
-   -- connect to storefront_test and grant privileges to `default_user` 
+
+   -- connect to storefront_test and grant privileges to `default_user`
    \c storefront_db_test
    GRANT ALL PRIVILEGES ON DATABASE storefront_test TO postgres
    ```
-
-   
 
 ## Scripts
 
@@ -42,8 +36,6 @@ It is expected to run npm install first before executing any of the scripts belo
 - migrate up: `npm run migrate-up`
 - migrate down: `npm run migrate-down`
 - test: `npm run test`
-
-
 
 ## sample .env
 
